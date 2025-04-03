@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+        <!-- Imagen del menú -->
+        <div class="menu-container">
+            <img src="{{ url_for('static', filename='images/menu.jpg') }}" alt="menu" class="menu">
+        </div>
+
+            <!-- Formulario -->
+            <div class="form-container">
+                <form class="form">
+                    <h2 class="titulo-form">Iniciar Sesión</h2>
+                    
+                    <div class="flex-column">
+                        <label>Número celular</label>
+                    </div>
+                    <div class="inputForm">
+                        <input placeholder="Ingresa tu número celular   " class="input" type="number">
+                    </div>
+
+                    <div class="flex-column">
+                        <label>Contraseña</label>   
+                    </div>
+                    <div class="inputForm">
+                        <input placeholder="Ingresa tu contraseña" class="input" type="password">
+                    </div>
+                    <button class="button-submit">Iniciar sesión</button>
+                     <!-- Botón de regreso -->
+                     <button type="button" onclick="location.href='{{ url_for('home') }}'" class="back-btn">Regresar</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,243 @@
+/* Contenedor principal con flexbox */
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  background-color: #121212;
+}
+
+.header{
+background-color: #302b2b; /* Cambia el color de fondo del menú */  
+height: 90px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 0 10%;
+}
+
+.titulo{
+  color: white; /* Cambia este color según lo que necesites */
+  font-size: 45px; /* Ajusta el tamaño si es necesario */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  text-align: left; /* Centra el texto */
+}
+
+/* Estilo del título del formulario */
+.titulo-form {
+  color: white; /* Cambia este color según lo que necesites */
+  font-size: 24px; /* Ajusta el tamaño si es necesario */
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Contenedor principal que divide la pantalla en dos */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Contenedor del menú (lado izquierdo) */
+/* Contenedor del menú (centra los botones en la pantalla) */
+.menu-container {
+  display: flex;
+  flex-direction: column; /* Coloca los botones uno debajo del otro */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/* Botones */
+.btn {
+  font-size: 17px;
+  text-decoration: none;
+  padding: 15px 30px; /* Ajuste de tamaño */
+  display: block; /* Hace que los botones ocupen una línea completa */
+  cursor: pointer;
+  border-radius: 10px; 
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+  width: 200px;  /* Ajusta el ancho */
+  text-align: center;
+  margin: 10px 0; /* Espacio entre botones */
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Imagen del menú */
+.menu {
+  width: 80%;
+  height: auto;
+  max-height: 90%;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+/* Contenedor del formulario (lado derecho) */
+.form-container {
+  flex: 1; /* Ocupa la mitad derecha */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #1f1f1f;
+  padding: 30px;
+  width: 450px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Placeholder */
+::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #aaa;
+}
+
+/* Botón de envío */
+.form button {
+  align-self: flex-end;
+}
+
+/* Etiquetas de los campos */
+.flex-column > label {
+  color: #f1f1f1;
+  font-weight: 600;
+}
+
+/* Campo de entrada */
+.inputForm {
+  border: 1.5px solid #333;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+  background-color: #2b2b2b;
+}
+
+/* Estilo del input */
+.input {
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+}
+
+/* Quitar borde en focus */
+.input:focus {
+  outline: none;
+}
+
+/* Estilos del botón de envío */
+.button-submit {
+  margin: 20px 0 10px 0;
+  background-color: #2d79f3;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button-submit:hover {
+  background-color: #0056b3;
+}
+
+/* Texto informativo */
+.p {
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+.btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 17px;
+  text-decoration: none;
+  padding: 10px 10px; /* Tamaño del botón */
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10px; /* Bordes menos redondeados */
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+  
+  width: fit-content;  /* Se ajusta al contenido */
+  height: auto; /* Se ajusta automáticamente */
+  
+  /* Limitar tamaño máximo */
+  max-width: 200px;
+  max-height: 50px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.2) scaleY(1.2);
+}
+
+/* Estilo del botón de volver */
+.back-btn {
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  background-color: #ff4b4b;
+}
+
+.back-btn:hover {
+  background-color: #cc0000;
+} 
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clari's</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body> 
+    <!-- Botón para mostrar la interfaz -->
+      <!-- Botones con las rutas correctas -->
+      <div class="menu-container""">
+        <button onclick="location.href='{{ url_for('Usuario') }}'" class="btnU">Log In Usuario</button>
+        <button onclick="location.href='{{ url_for('Invitado') }}'" class="btnU">Invitado</button>
+        </div>
+    <div class="header" id="welcomeMessage">
+        <h1 class="titulo">Clari´s te da la bienvenida.</h1>
+        
+    </div>
+</body>
+
+</html>
